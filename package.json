@@ -1,7 +1,7 @@
 {
-  "name": "confusion",
+  "name": "clothel",
   "version": "1.0.0",
-  "description": "This is a website for Ristorante Con Fusion",
+  "description": "clothel fashion platform",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",

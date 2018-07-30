@@ -11,117 +11,372 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Clothel</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-light text-white fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand"><span class="fa fa-scissors"></span> Clothel</a>
+            <button class="navbar-toggler btn-go" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="fa fa-arrow-circle-o-down"></span>
             </button>
-            <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-                </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-none d-sm-block"><a role="button" href="#" class="btn btn-social-icon btn-facebook ml-2"><span class="fa fa-facebook fa-lg"></span> </a></li>
+                        <li class="nav-item d-none d-sm-block"><a role="button" href="#" class="btn btn-social-icon btn-twitter ml-2"><span class="fa fa-twitter fa-lg"></span></a></li>
+                        <li class="nav-item d-none d-sm-block"><a role="button" href="#" class="btn btn-social-icon btn-google ml-2 "><span class="fa fa-google fa-lg"></span></a></li>
+                    </ul>
+                <form class="form-inline my-2 my-lg-0 ml-auto">
+                    <div class="dropdown">
+                            <button class="btn gender-toggle btn-secondary dropdown-toggle" type="button" id="genderToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Select your gender
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="genderToggle">
+                              <a class="dropdown-item" href="#">Male</a>
+                              <a class="dropdown-item" href="#">Female</a>
+                            </div>
+                    </div>
+                </form>
             </div>
         </div>
-
     </nav>
-
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 col-sm">
+    <header>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <h1 class="mb-0 logo-text mt-0">Clothel</h1>
+                        <p class="clo-slogan mt-0 mb-0"> &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Made by you, for the world...</p>
+                        <a href="#reserve" role="button" class="d-none d-sm-block what-clo col-sm-8 btn text-white nav-link btn-danger account_btn">What is Clothel?</a>
+                    </div>
+                    <div class="col-12 col-sm-3 align-self-center">
+                    </div>
+                    <div class="col-12 col-sm-3 align-self-center">
+                                <a href="#reserve" role="button" class="btn text-white nav-link btn-danger mb-4 account_btn"><span class="fa fa-sign-in fa-lg"></span> Login</a>
+                                <a href="#reserve" role="button" class="btn text-white nav-link btn-danger account_btn"><span class="fa fa-pencil-square-o"></span> Register</a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+    <!-- Page Content -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="d-none d-sm-block col-sm-6 offset-sm-4">
+                <p class="trending mb-0">Trending</p>
             </div>
         </div>
 
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
+        <div class="row">
+    
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header">
+                        <p class="text-white">Search</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <input type="text" class="form-control mb-3" id="searchTerm" placeholder="Search Term...">
+                            <p class="card-text mb-3 ml-1 text-muted">In</p>
+                            <select class="custom-select mb-3">
+                                <option selected="">All Categories</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Children</option>
+                            </select>
+                            <p class="card-text mb-3 ml-1 text-muted">With Price From</p>
+                            <select class="custom-select">
+                                <option selected="">All Prices</option>
+                                <option value="1">Below #1,000</option>
+                                <option value="2">#1,000 - #10,000</option>
+                                <option value="3">#10,000 - #50,000</option>
+                                <option value="3">#50,000 above</option>
+                            </select>
+                            <button type="button" class="col-12 btn btn-danger text-white mt-3"><span class="fa fa-search"></span> Search</button>
+                        </form>
+                    </div>
+                </div> 
             </div>
-            <div class="col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <!-- /.col-lg-2 -->
+    
+            <div class="col-sm-6 col-lg-4  d-none d-sm-block">
+    
+                <div id="carouselContent" class="carousel slide my-1" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselContent" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselContent" data-slide-to="1"></li>
+                        <li data-target="#carouselContent" data-slide-to="2"></li>
+                        <li data-target="#carouselContent" data-slide-to="3"></li>
+                        <li data-target="#carouselContent" data-slide-to="4"></li>
+                    </ol>
+                    <p class="mb-1 slide-label">For Him <span class="fa fa-male fa-lg"></span></p>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/b1.png" alt="First slide">
+                            <p class="carousel-caption custom-effect"><a href="#" class="text-white">Koporate Kente</a> <span class="badge badge-primary" >LATEST</span><br>
+                                By Kopo8 Designz</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/b2.png" alt="Second slide">
+                            <p class="carousel-caption custom-effect"><a href="#" class="text-white">Emirarewa</a> <span class="badge badge-danger" >HOT</span><br>
+                                By Dan Gaye</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/b3.png" alt="Third slide">
+                            <p class="carousel-caption custom-effect"><a href="#" class="text-white">Boss wambe</a> <span class="badge badge-success" >TRENDING</span><br>
+                                By OluSwag</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/b4.png" alt="Fourth slide">
+                            <p class="carousel-caption custom-effect"><a href="#" class="text-white">Zillion</a> <span class="badge badge-danger" >PREMIUM</span><br>
+                                By Omo-Pele</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/b6.jpg" alt="Fifth slide">
+                            <p class="carousel-caption custom-effect"><a href="#" class="text-white">Peace Walk</a> <span class="badge badge-info" >SWAG</span><br>
+                                By BlackStar </p>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 d-none d-sm-block">
+
+                <div id="carouselContent2" class="carousel slide my-1" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselContent2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselContent2" data-slide-to="1"></li>
+                        <li data-target="#carouselContent2" data-slide-to="2"></li>
+                        <li data-target="#carouselContent2" data-slide-to="3"></li>
+                        <li data-target="#carouselContent2" data-slide-to="4"></li>
+                        <li data-target="#carouselContent2" data-slide-to="5"></li>
+                    </ol>
+                    <p class="mb-1 slide-label">For Her <span class="fa fa-female fa-lg"></span></p>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="img/g10.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/g9.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/g7.jpg" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/g14.jpg" alt="Fourth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/g15.jpg" alt="Fifth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="img/g16.jpg" alt="Sixth slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselContent2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselContent2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-sm-none offset-sm-4">
+                <p class="trending mb-0">Trending</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-sm-none">
+                <div id="carouselContent2" class="carousel slide my-4" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselContent2" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselContent2" data-slide-to="1"></li>
+                            <li data-target="#carouselContent2" data-slide-to="2"></li>
+                            <li data-target="#carouselContent2" data-slide-to="3"></li>
+                            <li data-target="#carouselContent2" data-slide-to="4"></li>
+                            <li data-target="#carouselContent2" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="img/astrachan.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="img/chapel.png" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="img/duvall.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="img/hilton.jpg" alt="Fourth slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="img/rodger.png" alt="Fifth slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="img/duvall.jpg" alt="Sixth slide">
+                            </div>
+                        </div>
+                    <a class="carousel-control-prev" href="#carouselContent2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselContent2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="mb-0">
+        <!--beginning of Latest Box-->
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                    <p class="latest mb-1">Most Popular Designs</p>
+            </div>
+            <div class="d-none d-sm-block col-sm-6">
+                    <p class="latest mb-1">Most Popular Designers</p>
             </div>
         </div>
 
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/g5.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5>#7,500 <a class="btn btn-danger btn-sm ml-auto text-white" href="#"><span class="fa fa-cart-plus"></span>Add to Cart</a>&nbsp;<a class="btn btn-info btn-sm ml-auto text-white" href="#">Buy</a></h5>
+                                
+                                <p class="card-text"><strong><a class="text-danger" href="#">Koporate Simple</a></strong> <br> By <strong>JennyStitch</strong><br></p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/g8.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5>#10,000</h5>
+                                <p class="card-text"><strong><a class="text-danger" href="#">Koporate Simple</a></strong> <br> By <strong>JennyStitch</strong><br></p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/b7.png" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5>#5,000</h5>
+                                <p class="card-text"><strong><a class="text-danger" href="#">Koporate Simple</a></strong> <br> By <strong>JennyStitch</strong><br></p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/b8.png" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5>#20,000</h5>
+                                <p class="card-text"><strong><a class="text-danger" href="#">Koporate Simple</a></strong> <br> By <strong>JennyStitch</strong><br></p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col col-sm order-sm-first col-md">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+            <div class="col-12 d-block d-sm-none">
+                    <p class="latest mb-1">Most Popular Designers</p>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/eni-d.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5></h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/g2.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5></h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/g1.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5></h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <a href="#"><img class="card-img-top" src="img/c5.jpg" alt=""></a>
+                            <div class="card-body p-2">
+                                <h5></h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                            </div>
+                            <div class="card-footer p-2">
+                                    <small>Rating: </small> <small class="stars">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-7 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address class="address">
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
-		              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
-		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
-                </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
-                    </div>
-                </div>
-           </div>
-           <div class="row justify-content-center">             
-                <div class="col-auto">
-                    <p>© Copyright 2018 Ristorante Con Fusion</p>
-                </div>
-           </div>
-        </div>
+    <footer class="py-5 bg-black">
+            <div class="container">
+              <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+            </div>
+            <!-- /.container -->
     </footer>
+
+
+    
     <!--jquery first, then popper.js, then bootstrap js.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
