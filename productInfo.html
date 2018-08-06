@@ -28,6 +28,9 @@
                         <li class="nav-item d-none d-sm-block"><a role="button" href="#" class="btn btn-social-icon btn-twitter ml-2"><span class="fa fa-twitter fa-lg"></span></a></li>
                         <li class="nav-item d-none d-sm-block"><a role="button" href="#" class="btn btn-social-icon btn-google ml-2 "><span class="fa fa-google fa-lg"></span></a></li>
                     </ul>
+
+                    <!--Top Gender Customisation-->
+
                 <form class="form-inline my-2 my-lg-0 ml-auto">
                     <div class="dropdown">
                             <span class="fa fa-shopping-bag"></span> <span class="badge badge-danger">0</span>&nbsp; &nbsp;
@@ -55,13 +58,35 @@
                     <div class="col-12 col-sm-3 align-self-center">
                     </div>
                     <div class="col-12 col-sm-3 align-self-center">
-                                <a href="#reserve" role="button" class="btn text-white nav-link btn-danger mb-4 account_btn"><span class="fa fa-sign-in fa-lg"></span> Login</a>
-                                <a href="#reserve" role="button" class="btn text-white nav-link btn-danger account_btn"><span class="fa fa-pencil-square-o"></span> Register</a>
+                                <a href="#reserve" role="button" data-toggle="modal" data-target="#logReg" class="btn text-white nav-link btn-danger mb-4 account_btn"><span class="fa fa-sign-in fa-lg"></span> Login</a>
+                                <a href="#reserve" role="button" data-toggle="modal" data-target="#logReg" class="btn text-white nav-link btn-danger account_btn"><span class="fa fa-pencil-square-o"></span> Register</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!--The login and Register Modal-->
+
+    <div id="logReg" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login/Register</h4>
+                        <button data-dismiss="#logReg" type="button" class="close">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="alert-danger">This site is still under construction,<br>
+                            but you can checkout the proposed product info page <a href="./productInfo.html">here</a><br>
+                            You can checkout the proposed Designer Studio Page <a href="./designerPage.html">here</a>
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
     <!-- Page Content -->
     <div class="container mb-5">
@@ -101,10 +126,10 @@
                     </div>
                 </div> 
             </div>
-            <!-- /.col-lg-2 -->
+            <!-- End of the Search bar -->
             <div class="col-12 offset-sm-1 col-sm-10 col-lg-5">
                 <div class="card product mt-1  text-center">
-                    <img class="card-img-top img-circle" src="img/b2.png" alt="guy">
+                    <img class="card-img-top img-circle" src="img/b2.jpg" alt="guy">
                     <h4 class="card-subtitler">Emirarewa<span class="badge badge-info badge-sm ml-3">#4,500</span><br>
                     by <small>ArewaMafia</small></h4>
                     <p class="card-text mb-2"><span class="btn btn-primary btn-sm">ArewaMafia's Studio</span><span class="btn btn-danger btn-sm ml-4">Contact ArewaMafia</span></p>
@@ -129,7 +154,8 @@
         
         
         <hr class="mb-0">
-        <!--beginning of Latest Box-->
+
+        <!--beginning of The bottom Section-->
         <div class="row">
             <div class="col-12 col-sm-6">
                     <p class="latest mb-1">Similar Designs</p>
@@ -144,7 +170,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="card mb-4">
-                            <a href="#"><img class="card-img-top" src="img/b3.png" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="img/b3.jpg" alt=""></a>
                             <div class="card-body p-2">
                                 <h5>#7,500 <a class="btn btn-danger btn-sm ml-auto text-white" href="#"><span class="fa fa-cart-plus"></span>Add to Cart</a>&nbsp;<a class="btn btn-info btn-sm ml-auto text-white" href="#">Buy</a></h5>
                                 
@@ -157,7 +183,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card mb-4">
-                            <a href="#"><img class="card-img-top" src="img/b4.png" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="img/b4.jpg" alt=""></a>
                             <div class="card-body p-2">
                                 <h5>#10,000 <a class="btn btn-danger btn-sm ml-auto text-white" href="#"><span class="fa fa-cart-plus"></span>Add to Cart</a>&nbsp;<a class="btn btn-info btn-sm ml-auto text-white" href="#">Buy</a></h5>
                                 <p class="card-text"><strong><a class="text-danger" href="#">Da Prince</a></strong> <br> By <strong>Chi-Boy</strong><br></p>
@@ -171,7 +197,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="card mb-4">
-                            <a href="#"><img class="card-img-top" src="img/b7.png" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="img/b7.jpg" alt=""></a>
                             <div class="card-body p-2">
                                 <h5>#5,000 <a class="btn btn-danger btn-sm ml-auto text-white" href="#"><span class="fa fa-cart-plus"></span>Add to Cart</a>&nbsp;<a class="btn btn-info btn-sm ml-auto text-white" href="#">Buy</a></h5>
                                 <p class="card-text"><strong><a class="text-danger" href="#">Ova-Ol</a></strong> <br> By <strong>OyoBest</strong><br></p>
@@ -183,7 +209,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card mb-4">
-                            <a href="#"><img class="card-img-top" src="img/b8.png" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="img/b8.jpg" alt=""></a>
                             <div class="card-body p-2">
                                 <h5>#12,000 <a class="btn btn-danger btn-sm ml-auto text-white" href="#"><span class="fa fa-cart-plus"></span>Add to Cart</a>&nbsp;<a class="btn btn-info btn-sm ml-auto text-white" href="#">Buy</a></h5>
                                 <p class="card-text"><strong><a class="text-danger" href="#">Royal-Hommy</a></strong> <br> By <strong>Priceless-Prince</strong><br></p>
@@ -254,6 +280,8 @@
             </div>
         </div>
     </div>
+
+    <!--Footer Content Begining-->
     <footer class="py-5 bg-black">
             <div class="container">
                 <div class="row">
